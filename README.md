@@ -9,11 +9,11 @@ Sistemas Distribuidos y Programación Paralela — 2026 · Dr. David Petrocelli
 
 | Integrante | Rol | Hits |
 |---|---|---|
-| Agustina Ortiz | Plataforma (repo, CI/CD, nube, informe) + transporte básico | 1, 2, 3 |
+| Agustina Ortiz | Plataforma — repo, CI/CD, nube y entrega | 1, 2, 3 |
 | _por completar_ | Nodo C — transporte y RPC | 4, 5, 8 |
-| _por completar_ | Nodo D — registro y coordinación | 6, 7 |
+| _por completar_ | Nodo D — registro, coordinación y pruebas de integración | 6, 7 |
 
-Cada quien escribe el `README.md` de sus propios Hits, apenas los termina.
+Cada quien escribe el `README.md` de sus propios Hits y su parte del informe, apenas los termina.
 
 ---
 
@@ -83,6 +83,22 @@ Con puerto aleatorio, C tiene que **leer cuál le tocó** con `getsockname()[1]`
 ### 7. Quién escribe cada README
 
 El autor del Hit, apenas lo termina. Las decisiones de diseño solo las conoce quien las tomó. Los diagramas van en **Mermaid dentro del propio README**: es texto, versiona en Git y GitHub lo renderiza sin herramientas externas. La plantilla común está en [`docs/plantilla-readme-hit.md`](docs/plantilla-readme-hit.md).
+
+### 8. Quién escribe cada sección del informe
+
+Misma regla que los README: el informe no lo escribe una sola persona.
+
+| Integrante | Secciones |
+|---|---|
+| A · Nodo C | Sus Hits (4, 5, 8), la comparación JSON vs Protobuf y los diagramas globales |
+| B · Nodo D | Sus Hits (6, 7) y la evidencia de dos ventanas consecutivas |
+| C · Plataforma | Introducción, arquitectura general, falacias, herramientas de IA, conclusiones y ensamblado |
+
+El esqueleto con todas las secciones ya tituladas está en [`docs/informe.md`](docs/informe.md).
+
+### 9. Video
+
+El enunciado pide una grabación subida al repositorio. **Decisión pendiente del grupo:** si se reemplaza por la presentación en clase, conviene igual grabar esa presentación y subirla a `docs/video/` — cuesta cero horas y cierra un requisito explícito.
 
 ---
 
