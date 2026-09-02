@@ -1,0 +1,36 @@
+# --- Secretos: nunca commitear ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+service-account*.json
+
+# --- Salidas de ejecución ---
+logs/
+data/
+*.log
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# --- gRPC generado (Hit 8): se regenera con protoc ---
+*_pb2.py
+*_pb2_grpc.py
+*_pb2.pyi
+
+# --- Editores / SO ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

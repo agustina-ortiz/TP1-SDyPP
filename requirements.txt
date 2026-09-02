@@ -1,0 +1,7 @@
+# Runtime
+grpcio==1.68.1
+grpcio-tools==1.68.1
+
+# Testing
+pytest==8.3.4
+pytest-timeout==2.3.1

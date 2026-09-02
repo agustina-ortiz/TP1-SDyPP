@@ -1,0 +1,16 @@
+.git/
+.github/
+.venv/
+__pycache__/
+.pytest_cache/
+logs/
+data/
+docs/
+tests/
+hit1/
+hit2/
+hit3/
+hit4/
+hit5/
+hit6/
+hit8/
