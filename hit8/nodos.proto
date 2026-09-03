@@ -1,0 +1,45 @@
+syntax = "proto3";
+
+package hit8;
+
+message Nodo {
+  string host = 1;
+  uint32 port = 2;
+}
+
+message SaludoRequest {
+  Nodo origen = 1;
+  string mensaje = 2;
+  string ts = 3;
+}
+
+message AckResponse {
+  Nodo origen = 1;
+  string ref = 2;
+  string ts = 3;
+}
+
+message RegistroRequest {
+  Nodo nodo = 1;
+}
+
+message RegistroResponse {
+  string ventana = 1;
+  repeated Nodo peers = 2;
+}
+
+message PeersRequest {}
+
+message PeersResponse {
+  string ventana = 1;
+  repeated Nodo peers = 2;
+}
+
+service NodoCService {
+  rpc Saludar(SaludoRequest) returns (AckResponse);
+}
+
+service RegistroDService {
+  rpc Registrar(RegistroRequest) returns (RegistroResponse);
+  rpc ObtenerPares(PeersRequest) returns (PeersResponse);
+}
