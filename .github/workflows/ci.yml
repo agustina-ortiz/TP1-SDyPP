@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0   # gitleaks necesita el historial completo, no solo el ultimo commit
+          fetch-depth: 0  # gitleaks necesita el historial completo, no solo el ultimo commit
 
       - name: Buscar secretos en el repo y su historial
         uses: gitleaks/gitleaks-action@v2
@@ -36,6 +36,9 @@ jobs:
 
       - name: Instalar dependencias
         run: pip install -r requirements.txt
+
+      - name: Generar codigo gRPC
+        run: python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. hit8/nodos.proto
 
       - name: Correr pruebas
         run: pytest -v

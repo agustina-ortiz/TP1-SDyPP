@@ -22,8 +22,18 @@ def parser_nodo_c_con_registro(descripcion: str) -> argparse.ArgumentParser:
     """Hits 6, 7 y 8: C solo conoce a D y escucha en un puerto aleatorio."""
     p = argparse.ArgumentParser(description=descripcion)
     p.add_argument("--d-host", required=True, help="IP del nodo D (registro)")
-    p.add_argument("--d-port", type=int, required=True, help="Puerto HTTP del nodo D")
-    p.add_argument("--intervalo", type=float, default=5.0, help="Segundos entre saludos")
+    p.add_argument(
+        "--d-port",
+        type=int,
+        required=True,
+        help="Puerto del nodo D",
+    )
+    p.add_argument(
+        "--intervalo",
+        type=float,
+        default=5.0,
+        help="Segundos entre saludos",
+    )
     return p
 
 
