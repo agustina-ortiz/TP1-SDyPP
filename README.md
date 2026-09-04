@@ -112,8 +112,13 @@ python -m venv .venv
 source .venv/bin/activate        # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
+# Genera el codigo del Hit 8 a partir del .proto
+python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. hit8/nodos.proto
+
 pytest -v
 ```
+
+**El paso de `protoc` no es opcional.** Los archivos `hit8/nodos_pb2.py` y `hit8/nodos_pb2_grpc.py` los genera `grpcio-tools` a partir de `hit8/nodos.proto` y están en el `.gitignore`, porque código generado no se versiona: se regenera. En un clon recién hecho no existen, así que sin ese comando `pytest` falla al importarlos. El pipeline lo corre solo, antes de las pruebas.
 
 ## Seguridad
 

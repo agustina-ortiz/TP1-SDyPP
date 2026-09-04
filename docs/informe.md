@@ -222,8 +222,6 @@ mensaje deja de poder leerse con un `cat`.
 
 ## 6. Herramientas de IA utilizadas
 
-El enunciado lo pide explícitamente. Qué herramienta usó cada integrante, en qué parte y para qué: codificar, depurar o documentar.
-
 | Integrante | Herramienta | En qué ayudó |
 |---|---|---|
 | Agustina Ortiz | Claude Code | Andamiaje inicial del repositorio y del CI, esqueletos de código con los huecos marcados para completar a mano, explicación de sockets y del flujo de trabajo con Git y Pull Requests, y revisión y redacción de la documentación. |
