@@ -11,7 +11,7 @@ Sistemas Distribuidos y Programación Paralela — 2026 · Dr. David Petrocelli
 |---|---|---|
 | Agustina Ortiz | Plataforma — repo, CI/CD, nube y entrega | 1, 2, 3 |
 | Justino Bernal | Nodo C — transporte y RPC | 4, 5, 8 |
-| _por completar_ | Nodo D — registro, coordinación y pruebas de integración | 6, 7 |
+| Federico Kasparian | Nodo D — registro, coordinación y pruebas de integración | 6, 7 |
 
 Cada quien escribe el `README.md` de sus propios Hits y su parte del informe, apenas los termina.
 
