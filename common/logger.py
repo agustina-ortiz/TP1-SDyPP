@@ -24,9 +24,23 @@ from datetime import datetime, timezone
 MAX_EN_RAM = 500
 
 
+def _formatear(momento: datetime) -> str:
+    return momento.isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
 def ahora_iso() -> str:
     """Timestamp UTC en ISO-8601. Todo el sistema usa UTC, sin excepciones."""
-    return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+    return _formatear(datetime.now(timezone.utc))
+
+
+def iso_desde(epoch: float) -> str:
+    """El mismo formato que ahora_iso(), para un instante epoch arbitrario.
+
+    Lo usa el Hit 7 para nombrar las ventanas: si el identificador de una
+    ventana se formateara distinto que los timestamps de los logs, cruzar
+    eventos con ventanas seria innecesariamente incomodo.
+    """
+    return _formatear(datetime.fromtimestamp(epoch, timezone.utc))
 
 
 class Logger:
