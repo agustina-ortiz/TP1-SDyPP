@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif">
+<rect width="760" height="420" fill="#fcfcfb"/>
+<text x="28" y="34" font-size="17" font-weight="600" fill="#0b0b0b">Hit 8 — Latencia de ida y vuelta</text>
+<text x="28" y="56" font-size="12.5" fill="#52514e">El ahorro de bytes se paga en latencia: sobre loopback gRPC tarda casi el triple.</text>
+<line x1="74" y1="346.00" x2="732" y2="346.00" stroke="#c9c8c2" stroke-width="1"/>
+<text x="64" y="350.00" font-size="11.5" fill="#52514e" text-anchor="end">0</text>
+<line x1="74" y1="261.33" x2="732" y2="261.33" stroke="#e5e4df" stroke-width="1"/>
+<text x="64" y="265.33" font-size="11.5" fill="#52514e" text-anchor="end">0,05</text>
+<line x1="74" y1="176.67" x2="732" y2="176.67" stroke="#e5e4df" stroke-width="1"/>
+<text x="64" y="180.67" font-size="11.5" fill="#52514e" text-anchor="end">0,1</text>
+<line x1="74" y1="92.00" x2="732" y2="92.00" stroke="#e5e4df" stroke-width="1"/>
+<text x="64" y="96.00" font-size="11.5" fill="#52514e" text-anchor="end">0,15</text>
+<rect x="28" y="66" width="10" height="10" rx="2" fill="#2a78d6"/>
+<text x="43" y="75" font-size="12" fill="#52514e">JSON sobre TCP</text>
+<rect x="142" y="66" width="10" height="10" rx="2" fill="#eb6834"/>
+<text x="157" y="75" font-size="12" fill="#52514e">gRPC + Protobuf</text>
+<path d="M136.67 346.00 L136.67 290.73 Q136.67 286.73 140.67 286.73 L178.67 286.73 Q182.67 286.73 182.67 290.73 L182.67 346.00 Z" fill="#2a78d6"/>
+<text x="159.67" y="279.73" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">0,035</text>
+<path d="M184.67 346.00 L184.67 185.75 Q184.67 181.75 188.67 181.75 L226.67 181.75 Q230.67 181.75 230.67 185.75 L230.67 346.00 Z" fill="#eb6834"/>
+<text x="207.67" y="174.75" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">0,097</text>
+<text x="183.67" y="368" font-size="12.5" fill="#0b0b0b" text-anchor="middle">Media</text>
+<path d="M356.00 346.00 L356.00 290.73 Q356.00 286.73 360.00 286.73 L398.00 286.73 Q402.00 286.73 402.00 290.73 L402.00 346.00 Z" fill="#2a78d6"/>
+<text x="379.00" y="279.73" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">0,035</text>
+<path d="M404.00 346.00 L404.00 185.75 Q404.00 181.75 408.00 181.75 L446.00 181.75 Q450.00 181.75 450.00 185.75 L450.00 346.00 Z" fill="#eb6834"/>
+<text x="427.00" y="174.75" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">0,097</text>
+<text x="403.00" y="368" font-size="12.5" fill="#0b0b0b" text-anchor="middle">Mediana</text>
+<path d="M575.33 346.00 L575.33 282.27 Q575.33 278.27 579.33 278.27 L617.33 278.27 Q621.33 278.27 621.33 282.27 L621.33 346.00 Z" fill="#2a78d6"/>
+<text x="598.33" y="271.27" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">0,04</text>
+<path d="M623.33 346.00 L623.33 163.73 Q623.33 159.73 627.33 159.73 L665.33 159.73 Q669.33 159.73 669.33 163.73 L669.33 346.00 Z" fill="#eb6834"/>
+<text x="646.33" y="152.73" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">0,11</text>
+<text x="622.33" y="368" font-size="12.5" fill="#0b0b0b" text-anchor="middle">p95</text>
+<text x="28" y="402" font-size="11.5" fill="#52514e">Milisegundos. 500 iteraciones sobre loopback, conexión persistente.</text>
+</svg>

@@ -245,6 +245,18 @@ Protocol Buffers redujo el payload total un 53,1 %. gRPC mostró mayor latencia
 local debido al procesamiento de HTTP/2, despacho RPC y capas adicionales del
 framework.
 
+![Tamaño del mensaje: JSON frente a Protocol Buffers, por saludo, ACK y total](diagramas/hit8-tamanos.svg)
+
+**Figura 1.** El ahorro de Protobuf es proporcionalmente parejo en los dos
+mensajes, no un efecto de uno solo: recorta el saludo un 55,6 % y el ACK un
+50,8 %.
+
+![Latencia de ida y vuelta: JSON frente a gRPC, en media, mediana y p95](diagramas/hit8-latencia.svg)
+
+**Figura 2.** La contracara del ahorro. Las dos magnitudes van en gráficas
+separadas a propósito: bytes y milisegundos no comparten escala, y superponerlos
+en un eje doble sugeriría un cruce entre curvas que no existe.
+
 La medición utilizó `hit8/benchmark.py`, 20 intercambios de calentamiento y
 500 iteraciones sobre loopback. Ambos protocolos conservaron una conexión
 persistente. Los tamaños excluyen cabeceras TCP, HTTP/2 y framing gRPC.
@@ -264,6 +276,12 @@ se mató el tercer nodo C a los dos minutos. La copia del historial está en
 | `2026-09-05T01:28:00Z` | 3 | Se mata el C del puerto `22137` |
 | `2026-09-05T01:29:00Z` | 3 | Sigue siendo miembro: alcanzó a inscribirse antes de morir |
 | `2026-09-05T01:30:00Z` | 2 | Desaparece del presente |
+
+![Miembros de cada ventana, con la marca del nodo que se mata y la ventana en la que sobrevive](diagramas/hit7-ventanas.svg)
+
+**Figura 3.** La latencia de detección, leída de un vistazo: el nodo muere
+durante la ventana de las 01:28 y recién desaparece de `/peers` en la de las
+01:30.
 
 El `fin` de cada registro coincide con el `ventana` del siguiente: las ventanas
 son contiguas y no hay huecos. La primera cierra con cero nodos porque cuando D

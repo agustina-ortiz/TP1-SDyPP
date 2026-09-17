@@ -156,5 +156,6 @@ push a `main` dispara un redespliegue automático.
 
 - [Informe](docs/informe.md)
 - [Plantilla de README por Hit](docs/plantilla-readme-hit.md)
+- Gráficas del informe: `docs/diagramas/` — se regeneran con `python docs/graficas.py`
 - Video: `docs/video/`
 - Servicio en vivo: <https://tp1-sdypp.onrender.com/health>

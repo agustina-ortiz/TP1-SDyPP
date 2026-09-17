@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="420" viewBox="0 0 760 420" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif">
+<rect width="760" height="420" fill="#fcfcfb"/>
+<text x="28" y="34" font-size="17" font-weight="600" fill="#0b0b0b">Hit 8 — Tamaño del mensaje en la red</text>
+<text x="28" y="56" font-size="12.5" fill="#52514e">Protocol Buffers recorta el payload total un 53,1 % frente a JSON sobre TCP.</text>
+<line x1="74" y1="346.00" x2="732" y2="346.00" stroke="#c9c8c2" stroke-width="1"/>
+<text x="64" y="350.00" font-size="11.5" fill="#52514e" text-anchor="end">0</text>
+<line x1="74" y1="261.33" x2="732" y2="261.33" stroke="#e5e4df" stroke-width="1"/>
+<text x="64" y="265.33" font-size="11.5" fill="#52514e" text-anchor="end">100</text>
+<line x1="74" y1="176.67" x2="732" y2="176.67" stroke="#e5e4df" stroke-width="1"/>
+<text x="64" y="180.67" font-size="11.5" fill="#52514e" text-anchor="end">200</text>
+<line x1="74" y1="92.00" x2="732" y2="92.00" stroke="#e5e4df" stroke-width="1"/>
+<text x="64" y="96.00" font-size="11.5" fill="#52514e" text-anchor="end">300</text>
+<rect x="28" y="66" width="10" height="10" rx="2" fill="#2a78d6"/>
+<text x="43" y="75" font-size="12" fill="#52514e">JSON sobre TCP</text>
+<rect x="142" y="66" width="10" height="10" rx="2" fill="#eb6834"/>
+<text x="157" y="75" font-size="12" fill="#52514e">gRPC + Protobuf</text>
+<path d="M136.67 346.00 L136.67 250.94 Q136.67 246.94 140.67 246.94 L178.67 246.94 Q182.67 246.94 182.67 250.94 L182.67 346.00 Z" fill="#2a78d6"/>
+<text x="159.67" y="239.94" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">117</text>
+<path d="M184.67 346.00 L184.67 305.97 Q184.67 301.97 188.67 301.97 L226.67 301.97 Q230.67 301.97 230.67 305.97 L230.67 346.00 Z" fill="#eb6834"/>
+<text x="207.67" y="294.97" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">52</text>
+<text x="183.67" y="368" font-size="12.5" fill="#0b0b0b" text-anchor="middle">Saludo</text>
+<path d="M356.00 346.00 L356.00 246.71 Q356.00 242.71 360.00 242.71 L398.00 242.71 Q402.00 242.71 402.00 246.71 L402.00 346.00 Z" fill="#2a78d6"/>
+<text x="379.00" y="235.71" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">122</text>
+<path d="M404.00 346.00 L404.00 299.20 Q404.00 295.20 408.00 295.20 L446.00 295.20 Q450.00 295.20 450.00 299.20 L450.00 346.00 Z" fill="#eb6834"/>
+<text x="427.00" y="288.20" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">60</text>
+<text x="403.00" y="368" font-size="12.5" fill="#0b0b0b" text-anchor="middle">ACK</text>
+<path d="M575.33 346.00 L575.33 147.65 Q575.33 143.65 579.33 143.65 L617.33 143.65 Q621.33 143.65 621.33 147.65 L621.33 346.00 Z" fill="#2a78d6"/>
+<text x="598.33" y="136.65" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">239</text>
+<path d="M623.33 346.00 L623.33 255.17 Q623.33 251.17 627.33 251.17 L665.33 251.17 Q669.33 251.17 669.33 255.17 L669.33 346.00 Z" fill="#eb6834"/>
+<text x="646.33" y="244.17" font-size="11.5" font-weight="600" fill="#0b0b0b" text-anchor="middle">112</text>
+<text x="622.33" y="368" font-size="12.5" fill="#0b0b0b" text-anchor="middle">Total</text>
+<text x="28" y="402" font-size="11.5" fill="#52514e">Bytes de payload. Excluye cabeceras TCP, HTTP/2 y framing gRPC.</text>
+</svg>
