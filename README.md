@@ -120,6 +120,32 @@ pytest -v
 
 **El paso de `protoc` no es opcional.** Los archivos `hit8/nodos_pb2.py` y `hit8/nodos_pb2_grpc.py` los genera `grpcio-tools` a partir de `hit8/nodos.proto` y están en el `.gitignore`, porque código generado no se versiona: se regenera. En un clon recién hecho no existen, así que sin ese comando `pytest` falla al importarlos. El pipeline lo corre solo, antes de las pruebas.
 
+## Despliegue público
+
+El nodo D corre en Render, construido desde el `Dockerfile` de la raíz. Es el
+único componente desplegado: los nodos C se ejecutan en las máquinas del grupo.
+
+**https://tp1-sdypp.onrender.com/health**
+
+```bash
+curl https://tp1-sdypp.onrender.com/health
+
+curl -X POST https://tp1-sdypp.onrender.com/register \
+     -H "Content-Type: application/json" \
+     -d '{"host":"10.0.0.5","port":7001}'
+
+curl https://tp1-sdypp.onrender.com/peers
+curl https://tp1-sdypp.onrender.com/ventanas
+```
+
+> **La primera llamada puede tardar ~50 segundos.** El plan gratuito suspende el
+> servicio tras 15 minutos sin tráfico y lo despierta con la petición siguiente.
+> No es una caída: reintentar una vez alcanza.
+
+Render inyecta el puerto en la variable de entorno `PORT` y el `CMD` del
+`Dockerfile` la usa, por eso la imagen no necesita configuración extra. Cada
+push a `main` dispara un redespliegue automático.
+
 ## Seguridad
 
 - El `.env` real **nunca** se commitea. La plantilla vacía está en `.env.example`.
@@ -131,3 +157,4 @@ pytest -v
 - [Informe](docs/informe.md)
 - [Plantilla de README por Hit](docs/plantilla-readme-hit.md)
 - Video: `docs/video/`
+- Servicio en vivo: <https://tp1-sdypp.onrender.com/health>

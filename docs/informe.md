@@ -10,6 +10,7 @@ Universidad Nacional de Luján
 | Federico Kasparian | Nodo D — registro, coordinación y pruebas de integración | 6, 7 |
 
 Repositorio: https://github.com/agustina-ortiz/TP1-SDyPP
+Servicio desplegado: https://tp1-sdypp.onrender.com/health
 
 ## 1. Introducción
 
@@ -372,6 +373,15 @@ así a propósito, para que el Hit 5 tuviera un problema real que resolver.
 incluyen retardo de red, pérdida de paquetes ni reordenamiento, así que la
 ventaja de latencia de JSON sobre gRPC probablemente se diluya en una red real,
 donde el tiempo de transmisión pasa a dominar sobre el costo de serializar.
+
+**El despliegue corre en un plan gratuito con disco efímero.** El nodo D
+persiste el historial de ventanas en `data/inscripciones.json`, dentro del
+contenedor: cada redespliegue —y cada reinicio tras una suspensión por
+inactividad— lo deja en cero. Para la evaluación alcanza, porque `/health` y
+`/peers` reconstruyen su estado en la primera ventana, pero un registro que
+debiera sobrevivir a los reinicios necesitaría un volumen persistente o una
+base externa. A eso se suma la latencia del primer pedido, de unos 50
+segundos, mientras la plataforma despierta el servicio suspendido.
 
 ## 9. Referencias
 
