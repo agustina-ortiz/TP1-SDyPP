@@ -344,7 +344,13 @@ Verificado a mano, porque el CI construye la imagen pero nunca la corre:
 - `docker run --rm tp1-nodo-d:local ls /app` lista `common`, `hit7` y
   `requirements.txt`. No hay rastro de `hit6/`.
 - El contenedor cierra ventanas cada 60 segundos sin recibir un solo request.
-- Con `-e PORT=8080` el servidor levanta en 8080, como haría Cloud Run o Render.
+- Con `-e PORT=8080` el servidor levanta en 8080, que es como le inyecta el
+  puerto la plataforma.
+
+Desde el 17/09/2026 esto dejó de ser hipotético: el nodo D corre desplegado en
+<https://tp1-sdypp.onrender.com/health>, construido desde el mismo `Dockerfile`.
+La primera llamada puede tardar ~50 s porque el plan gratuito suspende el
+servicio por inactividad.
 
 ## Limitaciones conocidas
 

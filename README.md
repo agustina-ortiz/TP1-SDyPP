@@ -98,7 +98,7 @@ El esqueleto con todas las secciones ya tituladas está en [`docs/informe.md`](d
 
 ### 9. Video
 
-El enunciado pide una grabación subida al repositorio. **Decisión pendiente del grupo:** si se reemplaza por la presentación en clase, conviene igual grabar esa presentación y subirla a `docs/video/` — cuesta cero horas y cierra un requisito explícito.
+El enunciado pide una grabación subida al repositorio, y la corrección del 17/09/2026 la marcó como **pendiente obligatoria**: `docs/video/` sigue vacía. Debe mostrar el sistema corriendo y explicar servicios, componentes y configuraciones. Conviene mantenerlo corto y comprimido: GitHub avisa por encima de 50 MB y rechaza por encima de 100 MB.
 
 ---
 
